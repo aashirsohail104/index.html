@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #090a0e;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        } 
+    </style>
+    <title>Multiplication Tables (2 to 20)</title>
+</head>
+<body>
+    <h2>Multiplication Tables (2 to 20)</h2>
+    <table>
+        <tr>
+            <th>&times;</th>
+            <!-- Header row for table -->
+            <!-- Generating header columns from 2 to 20 -->
+            <script>
+                for (let i = 2; i <= 20; i++) {
+                    document.write('<th>' + i + '</th>');
+                }
+            </script>
+        </tr>
+        <!-- Table rows with multiplication results -->
+        <!-- Generating table rows from 2 to 20 -->
+        <script>
+            for (let i = 2; i <= 20; i++) {
+                document.write('<tr><th>' + i + '</th>');
+                for (let j = 2; j <= 20; j++) {
+                    document.write('<td>' + (i * j) + '</td>');
+                }
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+</body>
+</html>
+
